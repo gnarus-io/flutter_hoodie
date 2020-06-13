@@ -5,11 +5,15 @@ class Store {
     throw UnimplementedError();
   }
 
-  Future<dynamic> add(dynamic document) async {
+  Future<void> add(Map<String, dynamic> document) async {
     throw UnimplementedError();
   }
 
-  Future<List<dynamic>> addAll(List<dynamic> documents) async {
+  Future<void> addAll(List<Map<String, dynamic>> documents) async {
+    throw UnimplementedError();
+  }
+
+  Future<Map<String, dynamic>> find(String id) async {
     throw UnimplementedError();
   }
 }
