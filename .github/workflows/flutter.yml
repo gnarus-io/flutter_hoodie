@@ -1,0 +1,22 @@
+name: flutter-package-ci
+
+on:
+  push:
+    branches: [ master, features/add_ci ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    container:
+      image:  cirrusci/flutter:latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install dependencies
+      run: flutter packages get
+    - name: Run tests
+      run: flutter test
